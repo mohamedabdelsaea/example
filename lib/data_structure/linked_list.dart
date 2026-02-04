@@ -1,4 +1,6 @@
 // element of an array
+import 'dart:developer';
+
 class Node {
 /* this element have 2 attributes :-
 1- value of it
@@ -7,7 +9,7 @@ class Node {
   int value;
   Node? next;
   Node(this.value) {
-    this.next = null;
+    next = null;
   }
 }
 
@@ -16,7 +18,7 @@ class Node {
 class LinkedList {
 /*
 an array that have 2 attributes
-1- head => point nullable first node 
+1- head => point nullable first node
 2- length of the array
 3- tail => point nullable last node
 
@@ -36,10 +38,10 @@ an array that have 2 attributes
     Node newNode = Node(value);
     /* check if list's head is null:-
     - if true  - assign new node to head
-    - if false :- 
+    - if false :-
         * create iterator variable to assign head node on it
         * create while loop as well as iterator.next != null => then reassign iterator.next to iterator
-        * when iterator.next is null exit loop and then append new node to iterator.next 
+        * when iterator.next is null exit loop and then append new node to iterator.next
     - increase list length by 1
     */
     if (head == null) {
@@ -68,7 +70,7 @@ an array that have 2 attributes
 
 // method to add node or object in custom element to our linked list
   void insertNode(int index, int value) {
-    // check if index is equal to list lenghth:-
+    // check if index is equal to list length:-
 
     if (index == length) {
       // 1- if true call append function
@@ -96,7 +98,7 @@ an array that have 2 attributes
       Node afterNode = previousNode.next!;
       // create newNode  variable
       Node newNode = Node(value);
-      // assign new node to previousnode.next
+      // assign new node to prev.next
       previousNode.next = newNode;
       // assign after node to newNode.next
       newNode.next = afterNode;
@@ -137,12 +139,12 @@ an array that have 2 attributes
   // Linked list practice (print all nodes in our linked list)
   void printNodesValue() {
     if (length == 0) {
-      print("There is no nodes to print it's data");
+      log("There is no nodes to print it's data");
       return;
     }
     Node iterator = head!;
     for (int i = 0; i < length; i++) {
-      print("node no $i value = ${iterator.value} \n");
+      log("node no $i value = ${iterator.value} \n");
       iterator = iterator.next!;
     }
   }
