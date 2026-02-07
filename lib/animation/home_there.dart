@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeThere> {
                     redis = 25;
                   });
                 },
-                child: Text('animtion'),
+                child: Text('animation'),
               ),
             ],
           ),

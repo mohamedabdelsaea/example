@@ -1,32 +1,39 @@
-class Node {
-  int value;
+import 'package:flutter/material.dart';
 
-  Node? next;
+class Test extends StatefulWidget {
+  const Test({super.key});
 
-  Node(this.value) {
-    next = null;
-  }
+  @override
+  State<Test> createState() => _TestState();
 }
 
-class LinkedList {
-  Node? head;
-
-  Node? tail;
-
-  int length = 0;
-
-  LinkedList(this.length) {
-    head = tail = null;
-  }
-
-  void appendNode(int value) {
-    Node newNode = Node(value);
-    if (head == null) {
-      head = tail = newNode;
-    } else {
-      tail = newNode;
-      tail!.next = newNode;
-    }
-    length ++ ;
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    double height = 50;
+    double width = 50;
+    return Scaffold(
+      body: Column(
+        children: [
+          Center(
+            child: AnimatedContainer(
+              duration: Duration(seconds: 2),
+              height: height,
+              width: width,
+              color: Colors.blue,
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                width = 100;
+                height = 100;
+              });
+            },
+            child: Text('animation'),
+          ),
+        ],
+      ),
+    );
   }
 }
