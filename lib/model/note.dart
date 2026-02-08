@@ -43,5 +43,7 @@
 // 4 => image_packer :
 
 /*
- 1 =>
+ 1 => showDialog // عشان يظهر الكاميرا والمعرض
+ 2 => install =>  ( image_packer ,device_info_plus ,permission_handler)
+ 3 => android.xmi  // هتضيف كذا تصريح يطلب من المستخدم استخدام المعرض والكاميرا
  */
