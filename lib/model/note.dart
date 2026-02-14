@@ -47,3 +47,28 @@
  2 => install =>  ( image_packer ,device_info_plus ,permission_handler)
  3 => android.xmi  // هتضيف كذا تصريح يطلب من المستخدم استخدام المعرض والكاميرا
  */
+
+
+//*****************************************************************************
+
+
+// 5 => Modify Package
+
+/*
+ هيا عباره عن طريقه تعدبل ع الباكدج الاصليه
+
+ ex:   device_info_plus:
+         git:
+           url: https://github.com/mohamedabdelsaea/calendar_timeline.git
+ */
+
+
+//*****************************************************************************
+
+
+// 5 => problem solving
+
+/*
+ 1 => leetCode // حل مسائل problem solving
+
+ */
