@@ -6,7 +6,7 @@ class ModelDialog {
   static Future<File?> dialog(BuildContext context) async {
     return showDialog<File>(
       context: context,
-      builder: (context) {
+      builder: (dialogContext) {
         var size = MediaQuery.of(context).size;
 
         return Dialog(
@@ -33,18 +33,20 @@ class ModelDialog {
                       icon: Icons.camera_alt,
                       text: "Camera",
                       onTap: () async {
-                        final img =
-                        await ImagePackerModel.cameraPicker();
-                        Navigator.pop(context, img);
+                        final img = await ImagePackerModel.cameraPicker();
+                        if (dialogContext.mounted) {
+                          Navigator.pop(dialogContext, img);
+                        }
                       },
                     ),
                     _item(
                       icon: Icons.image,
                       text: "Gallery",
                       onTap: () async {
-                        final img =
-                        await ImagePackerModel.galleryPacker();
-                        Navigator.pop(context, img);
+                        final img = await ImagePackerModel.galleryPacker();
+                        if (dialogContext.mounted) {
+                          Navigator.pop(context, img);
+                        }
                       },
                     ),
                   ],

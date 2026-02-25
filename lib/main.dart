@@ -1,6 +1,8 @@
 import 'package:example/image_packer/image_packer_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'clock/clock_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
